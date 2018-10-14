@@ -1,0 +1,27 @@
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-table [value]="itens">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>Etiqueta</th>
+            <th>Descrição</th>
+            <th>Data Aquisição</th>
+            <th style="width:4em"></th>
+
+          </tr>  
+        </ng-template>
+        <ng-template pTemplate="body" let-iten>
+          <tr>
+            <td>{{iten.etiqueta}}</td>
+            <td>{{iten.descricao}}</td>
+            <td>{{iten.dataAquisicao | date:'dd/MM/yyyy'}} </td>                                                    
+            <td>
+                <button pButton icon="fa-search"></button>
+            </td>
+          </tr>
+        </ng-template>   
+      </p-table>
+  </div>
+</div>
+
